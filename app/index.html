@@ -5,16 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>Starter Template for Bootstrap 3.3.4</title>
+  <title>Transcriptulator</title>
   <link rel="shortcut icon" href="">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
   <style>body{padding-top:50px;}.starter-template{padding:40px 15px;text-align:center;}</style>
-
-  <!--[if IE]>
-    <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
 </head>
 
 <body>
@@ -27,23 +22,61 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Project name</a>
+        <a class="navbar-brand" href="#">Transcriptulator</a>
       </div>
 
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
         </ul>
       </div><!--.nav-collapse -->
     </div>
   </nav>
 
   <div class="container">
-    <div class="starter-template">
-      <h1>Hello, world!</h1>
-        <p class="lead">Now you can start your own project with <a target="_blank" href="http://getbootstrap.com/">Bootstrap 3.3.4</a>. This plugin is a fork from <a href="https://github.com/le717/brackets-html-skeleton#readme">HTML Skeleton</a>.</p>
+    <div class="row">
+      <div class="col-md-6">
+        <h3>
+            <span class="mega-octicon octicon-pencil"></span>
+            Raw Input
+            <small>Put Your Transcript Here</small>
+        </h3>
+        <form class="well">
+          <textarea name="text-to-transdownify" 
+                    id="text-to-transdownify"  
+                    rows="20" 
+                    tabindex="4">
+### Rebecca's gestural pseudo-coding    
+
+[33:33] Rebecca: and then my thinking at least, is you should be able to, um, say that "star p of i" /mmhmm/ equals, uh, the title, and then you just do i++, so then it’ll {{move to the next one}} ![makes looping gesture with left hand][1] /OK/
+
+[34:00] Rebecca: and you just keep {{saving each of the pointers}} ![left hand makes horizontal chops in the air, like rungs down a ladder][2]
+
+[1]: images/rebecca1.jpg
+[2]: images/rebecca2.png{% endraw %}</textarea>
+<button type="button" 
+        class="btn btn-lg btn-primary" 
+        role="button"
+        id="cheat-sheet"
+        tabindex="0"
+        data-toggle="popover" 
+        data-title="Transdown Syntax Cheat Sheet"
+        data-trigger="focus"
+        data-placement="top"
+        data-html="true" 
+        data-content='
+Test'>
+        Toggle Syntax Cheat Sheet</button>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <h3>
+          <span class="mega-octicon octicon-file-text"></span>
+          Live Preview
+          <small>What you get</small>
+        </h3>
+          <div id="live-preview">
+          </div>
+      </div>
     </div>
   </div>
 
