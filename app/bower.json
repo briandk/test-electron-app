@@ -1,0 +1,22 @@
+{
+  "name": "Transcriptulator",
+  "version": "0.1.0",
+  "homepage": "https://github.com/briandk/test-electron-app",
+  "authors": [
+    "Brian Danielak <brian@briandk.com>"
+  ],
+  "description": "A Github Electron App for live-edting Transdown source",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "handlebars": "~3.0.3",
+    "jquery": "~2.1.4"
+  }
+}
